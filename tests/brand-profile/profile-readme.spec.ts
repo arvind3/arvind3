@@ -17,13 +17,15 @@ test.describe('Profile README dynamic rendering', () => {
     expect(readme).not.toContain('<!-- auto-generated content here -->');
     expect(readme).toMatch(/pageviews|visitors|sessions/i);
     expect(readme).toMatch(/Top repos by traffic/i);
+    expect(readme).toContain('## GitHub Stats');
+    expect(readme).toContain('## GitHub Signal Board');
   });
 
-  test('all GitHub stats badge images resolve', async ({ request }) => {
+  test('GitHub stats assets are referenced and available', async ({ request }) => {
     const readme = fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8');
     const urls = readme.match(/https?:\/\/[^\s)>\"]+/g) || [];
     const imageUrls = [...new Set(urls)].filter((url) =>
-      /github-readme-stats|streak-stats|github-readme-activity-graph|shields\.io|gh-card\.dev|snake/i.test(url),
+      /shields\.io|gh-card\.dev/i.test(url),
     );
 
     expect(imageUrls.length).toBeGreaterThan(0);
@@ -31,10 +33,19 @@ test.describe('Profile README dynamic rendering', () => {
     for (const url of imageUrls) {
       const response = await request.get(url);
       const status = response.status();
-      const isTransientBadgeFailure =
-        /(github-readme-stats\.vercel\.app|streak-stats\.demolab\.com)/i.test(url) &&
-        [429, 503, 504].includes(status);
-      expect(status < 500 || isTransientBadgeFailure, `Image URL failed: ${url} (status ${status})`).toBe(true);
+      expect(status < 500, `Image URL failed: ${url} (status ${status})`).toBe(true);
+    }
+
+    const localAssets = [
+      'assets/github-metrics.svg',
+      'assets/metrics-languages.svg',
+      'assets/metrics-activity.svg',
+      'assets/metrics-isocalendar.svg',
+    ];
+
+    for (const asset of localAssets) {
+      expect(fs.existsSync(path.join(process.cwd(), asset)), `${asset} is missing`).toBe(true);
+      expect(readme).toContain(`https://raw.githubusercontent.com/arvind3/arvind3/main/${asset}`);
     }
   });
 

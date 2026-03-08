@@ -108,12 +108,38 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 ## GitHub Stats
 
 <div align="center">
+</div>
 
-<img src="https://github-readme-stats.vercel.app/api?username=arvind3&show_icons=true&rank_icon=github&include_all_commits=true&hide_border=true" alt="GitHub stats for arvind3" />
-<img src="https://streak-stats.demolab.com?user=arvind3&hide_border=true" alt="GitHub streak for arvind3" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arvind3&layout=compact&hide_border=true" alt="Top languages for arvind3" />
+High-signal view of contribution volume, language mix, recent activity, and calendar consistency. The cards below use repository-backed SVG assets so the section stays stable on the profile page.
+
+[![GitHub overview metrics for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/github-metrics.svg)](https://github.com/arvind3)
+
+[![Language breakdown for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/metrics-languages.svg)](https://github.com/arvind3)
+[![Recent activity snapshot for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/metrics-activity.svg)](https://github.com/arvind3)
+
+<div align="center">
+
+[![Contribution calendar for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/metrics-isocalendar.svg)](https://github.com/arvind3)
 
 </div>
+
+---
+
+## GitHub Signal Board
+
+<div align="center">
+
+[![AI Engineering](https://img.shields.io/badge/AI%20Engineering-Agentic%20Systems-0EA5E9?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/arvind3/qa-intelligence-platform)
+[![QA Intelligence](https://img.shields.io/badge/QA%20Intelligence-Automation%20at%20Scale-F97316?style=for-the-badge&logo=playwright&logoColor=white)](https://github.com/arvind3/robot-finetune-model)
+[![Analytics](https://img.shields.io/badge/Analytics-Measurable%20Engineering-16A34A?style=for-the-badge&logo=googleanalytics&logoColor=white)](https://github.com/arvind3/brand-analytics-dashboard)
+
+</div>
+
+Three themes define the work shown across this profile:
+
+- AI engineering: agentic workflows, evaluation loops, and LLM-backed product development.
+- QA intelligence: automation systems that turn test execution into actionable engineering insight.
+- Analytics: dashboards and measurement loops that make developer-brand and product signals visible.
 
 ---
 
