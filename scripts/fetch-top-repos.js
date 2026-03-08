@@ -57,8 +57,8 @@ async function main() {
   try {
     const allRepos = await fetchAllRepos();
 
-    // Exclude forks, archived repos, and repos named "test" or the profile repo itself
-    const SKIP = new Set(['test', USERNAME]);
+    // Exclude forks, archived repos, demo/test/utility repos, and the profile repo itself
+    const SKIP = new Set(['test', USERNAME, 'upptime', 'semprademo-test', 'sempra-demo']);
     const original = allRepos.filter(
       r => !r.fork && !r.archived && !SKIP.has(r.name.toLowerCase())
     );

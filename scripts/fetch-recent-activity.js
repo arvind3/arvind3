@@ -87,10 +87,12 @@ async function main() {
 
     const events = JSON.parse(body);
 
-    // Filter to meaningful event types, take first LIMIT
-    const meaningful = events.filter(e =>
-      ['PushEvent', 'PullRequestEvent', 'IssuesEvent', 'CreateEvent', 'ReleaseEvent'].includes(e.type)
-    ).slice(0, LIMIT);
+    // Filter to meaningful event types; exclude push events with 0 commits (GitHub Actions noise)
+    const meaningful = events.filter(e => {
+      if (!['PushEvent', 'PullRequestEvent', 'IssuesEvent', 'CreateEvent', 'ReleaseEvent'].includes(e.type)) return false;
+      if (e.type === 'PushEvent' && (e.payload?.commits?.length ?? 0) === 0) return false;
+      return true;
+    }).slice(0, LIMIT);
 
     if (meaningful.length === 0) throw new Error('No meaningful events found');
 

@@ -24,7 +24,7 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 → [View live dashboard](https://arvind3.github.io/brand-analytics-dashboard/) &nbsp;·&nbsp; [Source: brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation)
 
 <!-- DYNAMIC:METRICS:START -->
-<!-- auto-generated: dashboard metrics — updated daily via GitHub Actions -->
+> Dashboard data temporarily unavailable — [view live dashboard →](https://arvind3.github.io/brand-analytics-dashboard/)
 <!-- DYNAMIC:METRICS:END -->
 
 ---
@@ -57,7 +57,20 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 </div>
 
 <!-- DYNAMIC:REPOS:START -->
-<!-- auto-generated: top repos by stars/activity — updated weekly via GitHub Actions -->
+### Top Repos by Activity
+
+| Repo | Description | Language | Stars |
+|---|---|---|---|
+| [merchandising-core-concepts-for-grocery-business](https://github.com/arvind3/merchandising-core-concepts-for-grocery-business) | Merchandising Core Concepts for the Grocery Business | HTML | — |
+| [supplychain-coreconcepts-for-grocery-business](https://github.com/arvind3/supplychain-coreconcepts-for-grocery-business) |  | TypeScript | — |
+| [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation) | Automated brand analytics and performance monitoring | JavaScript | — |
+| [RobotFrameworkBookWithIDE](https://github.com/arvind3/RobotFrameworkBookWithIDE) | Robot Framework book with integrated IDE tooling | TypeScript | — |
+| [robot-framework-py-skill](https://github.com/arvind3/robot-framework-py-skill) | Standalone Robot Framework (Python) skill package for Skills | Python | — |
+| [robot-framework-ide](https://github.com/arvind3/robot-framework-ide) |  | TypeScript | — |
+| [robot-finetune-model](https://github.com/arvind3/robot-finetune-model) | Fine-tuned AI model for automated Robot Framework test gener | Python | — |
+| [retail_analytics](https://github.com/arvind3/retail_analytics) | Retail analytics platform for merchandising and supply chain | TypeScript | — |
+| [qa-intelligence-platform](https://github.com/arvind3/qa-intelligence-platform) | AI-powered QA intelligence platform for automated test analy | TypeScript | — |
+| [process-flow-write](https://github.com/arvind3/process-flow-write) |  | TypeScript | — |
 <!-- DYNAMIC:REPOS:END -->
 
 ---
@@ -81,7 +94,8 @@ Process flow tooling, code intelligence engines, and workflow automation designe
 ## Recent Activity
 
 <!-- DYNAMIC:ACTIVITY:START -->
-<!-- auto-generated: last 5 public events — updated daily via GitHub Actions -->
+- 🌿 **2026-03-08** Created branch `improvement2` in [arvind3/arvind3](https://github.com/arvind3/arvind3)
+- 🌿 **2026-03-08** Created branch `main` in [arvind3/arvind3](https://github.com/arvind3/arvind3)
 <!-- DYNAMIC:ACTIVITY:END -->
 
 ---
@@ -144,6 +158,6 @@ Process flow tooling, code intelligence engines, and workflow automation designe
 
 <div align="center">
 
-<sub>Dashboard auto-updated via GitHub Actions &nbsp;·&nbsp; lowlighter/metrics &nbsp;·&nbsp; Platane/snk &nbsp;·&nbsp; Last refreshed: <!-- DYNAMIC:TIMESTAMP -->never<!-- /DYNAMIC:TIMESTAMP --></sub>
+<sub>Dashboard auto-updated via GitHub Actions &nbsp;·&nbsp; lowlighter/metrics &nbsp;·&nbsp; Platane/snk &nbsp;·&nbsp; Last refreshed: <!-- DYNAMIC:TIMESTAMP -->2026-03-08<!-- /DYNAMIC:TIMESTAMP --></sub>
 
 </div>
