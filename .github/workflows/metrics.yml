@@ -69,7 +69,7 @@ jobs:
           plugin_activity: yes
           plugin_activity_limit: 7
           plugin_activity_days: 30
-          plugin_activity_filter: push, issue, pr, release, review, ref/create
+          plugin_activity_filter: push, issue, pr, release, review
 
       # Contribution calendar heatmap (full year)
       - name: Generate isocalendar metrics

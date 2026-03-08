@@ -69,6 +69,14 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 
 ---
 
+## Live Dashboard
+
+**[Brand Analytics Dashboard](https://arvind3.github.io/brand-analytics-automation/)** — a unified Google Analytics 4 + GTM intelligence platform that surfaces the real-world impact of every GitHub repo and project. It aggregates GA4 event data across all properties through a Cloudflare Worker proxy, runs automated repo discovery to keep coverage current, and deploys a central metrics dashboard on GitHub Pages. Built with Node.js; zero manual configuration once the workflow is running.
+
+→ [View live dashboard](https://arvind3.github.io/brand-analytics-automation/) &nbsp;·&nbsp; [Source: brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation)
+
+---
+
 ## Focus Areas
 
 **AI Engineering & LLM Agents**
