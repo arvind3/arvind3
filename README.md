@@ -2,68 +2,13 @@
 
 # Arvind Bhardwaj
 
-**AI Engineering &nbsp;·&nbsp; Test Automation &nbsp;·&nbsp; Retail & Supply Chain Analytics**
+**AI + QA + Analytics Engineering**
 
-Houston, Texas &nbsp;·&nbsp; [Twitter / @arvindkbhardwaj](https://twitter.com/arvindkbhardwaj)
+I build measurable engineering systems that combine LLM-driven quality automation, testing intelligence, and product analytics.
 
-</div>
-
----
-
-Building systems at the intersection of AI and software quality. I work on LLM agent frameworks, intelligent QA platforms, and analytics infrastructure for retail and supply chain operations — with a focus on shipping tools that reduce manual work and surface real signals.
-
----
-
-## GitHub Activity
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=arvind3&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="GitHub Streak" />
-
-</div>
-
----
-
-## Contribution Metrics
-
-<div align="center">
-
-<img src="./assets/github-metrics.svg" alt="GitHub Metrics" width="860" />
-
-</div>
-
-<div align="center">
-
-<img src="./assets/metrics-isocalendar.svg" alt="Contribution Calendar" width="860" />
-
-</div>
-
----
-
-## Featured Work
-
-<div align="center">
-
-<a href="https://github.com/arvind3/qa-intelligence-platform">
-  <img src="https://gh-card.dev/repos/arvind3/qa-intelligence-platform.svg?fullname=1&theme=dark_dimmed" alt="qa-intelligence-platform" />
-</a>
-<a href="https://github.com/arvind3/RobotFrameworkBookWithIDE">
-  <img src="https://gh-card.dev/repos/arvind3/RobotFrameworkBookWithIDE.svg?fullname=1&theme=dark_dimmed" alt="RobotFrameworkBookWithIDE" />
-</a>
-
-<a href="https://github.com/arvind3/retail_analytics">
-  <img src="https://gh-card.dev/repos/arvind3/retail_analytics.svg?fullname=1&theme=dark_dimmed" alt="retail_analytics" />
-</a>
-<a href="https://github.com/arvind3/robot-finetune-model">
-  <img src="https://gh-card.dev/repos/arvind3/robot-finetune-model.svg?fullname=1&theme=dark_dimmed" alt="robot-finetune-model" />
-</a>
-
-<a href="https://github.com/arvind3/founder-os">
-  <img src="https://gh-card.dev/repos/arvind3/founder-os.svg?fullname=1&theme=dark_dimmed" alt="founder-os" />
-</a>
-<a href="https://github.com/arvind3/brand-analytics-automation">
-  <img src="https://gh-card.dev/repos/arvind3/brand-analytics-automation.svg?fullname=1&theme=dark_dimmed" alt="brand-analytics-automation" />
-</a>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arvind%20Bhardwaj-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arvindkumarbhardwaj/)
+[![X](https://img.shields.io/badge/X-@arvindkbhardwaj-111111?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/arvindkbhardwaj)
+[![Brand Dashboard](https://img.shields.io/badge/Brand%20Analytics-Live%20Dashboard-2563EB?style=for-the-badge&logo=googleanalytics&logoColor=white)](https://arvind3.github.io/brand-analytics-dashboard/)
 
 </div>
 
@@ -71,60 +16,123 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 
 ## Live Dashboard
 
-**[Brand Analytics Dashboard](https://arvind3.github.io/brand-analytics-automation/)** — a unified Google Analytics 4 + GTM intelligence platform that surfaces the real-world impact of every GitHub repo and project. It aggregates GA4 event data across all properties through a Cloudflare Worker proxy, runs automated repo discovery to keep coverage current, and deploys a central metrics dashboard on GitHub Pages. Built with Node.js; zero manual configuration once the workflow is running.
+I measure developer-brand impact with data, not assumptions. The dashboard tracks usage trends, project traffic, and engagement behavior across repositories.
 
-→ [View live dashboard](https://arvind3.github.io/brand-analytics-automation/) &nbsp;·&nbsp; [Source: brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation)
+[![Dashboard Status](https://img.shields.io/badge/Dashboard-Live-16A34A?style=flat-square)](https://arvind3.github.io/brand-analytics-dashboard/)
+[![Dashboard Source](https://img.shields.io/badge/Source-brand--analytics--automation-1F2937?style=flat-square&logo=github)](https://github.com/arvind3/brand-analytics-automation)
+
+- Live dashboard: https://arvind3.github.io/brand-analytics-dashboard/
+- Source repository: https://github.com/arvind3/brand-analytics-automation
+- Update cadence: every 5 minutes (dashboard), daily profile refresh
+
+---
+
+## Dynamic Key Metrics
+
+<!-- DYNAMIC:METRICS:START -->
+- Visitors (users): **141**
+- Pageviews: **328**
+- Sessions: **155**
+- Engagement rate: **16.7%**
+- Active projects count: **28**
+- Top repos by traffic: Unknown (328 views)
+- Metric window: `30days`
+<!-- DYNAMIC:METRICS:END -->
+
+---
+
+## Featured Projects (Auto-ranked)
+
+<!-- DYNAMIC:REPOS:START -->
+<div align="center">
+
+<a href="https://github.com/arvind3/arvind3">
+  <img src="https://gh-card.dev/repos/arvind3/arvind3.svg?fullname=1" alt="arvind3" />
+</a>
+<a href="https://github.com/arvind3/merchandising-core-concepts-for-grocery-business">
+  <img src="https://gh-card.dev/repos/arvind3/merchandising-core-concepts-for-grocery-business.svg?fullname=1" alt="merchandising-core-concepts-for-grocery-business" />
+</a>
+<a href="https://github.com/arvind3/supplychain-coreconcepts-for-grocery-business">
+  <img src="https://gh-card.dev/repos/arvind3/supplychain-coreconcepts-for-grocery-business.svg?fullname=1" alt="supplychain-coreconcepts-for-grocery-business" />
+</a>
+<a href="https://github.com/arvind3/brand-analytics-automation">
+  <img src="https://gh-card.dev/repos/arvind3/brand-analytics-automation.svg?fullname=1" alt="brand-analytics-automation" />
+</a>
+<a href="https://github.com/arvind3/RobotFrameworkBookWithIDE">
+  <img src="https://gh-card.dev/repos/arvind3/RobotFrameworkBookWithIDE.svg?fullname=1" alt="RobotFrameworkBookWithIDE" />
+</a>
+<a href="https://github.com/arvind3/upptime">
+  <img src="https://gh-card.dev/repos/arvind3/upptime.svg?fullname=1" alt="upptime" />
+</a>
+
+</div>
+
+1. [arvind3](https://github.com/arvind3/arvind3) - No description yet (TypeScript)
+2. [merchandising-core-concepts-for-grocery-business](https://github.com/arvind3/merchandising-core-concepts-for-grocery-business) - Merchandising Core Concepts for the Grocery Business (HTML)
+3. [supplychain-coreconcepts-for-grocery-business](https://github.com/arvind3/supplychain-coreconcepts-for-grocery-business) - No description yet (TypeScript)
+4. [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation) - Automated brand analytics and performance monitoring (JavaScript)
+5. [RobotFrameworkBookWithIDE](https://github.com/arvind3/RobotFrameworkBookWithIDE) - Robot Framework book with integrated IDE tooling (TypeScript)
+6. [upptime](https://github.com/arvind3/upptime) - No description yet (n/a)
+<!-- DYNAMIC:REPOS:END -->
 
 ---
 
 ## Focus Areas
 
-**AI Engineering & LLM Agents**
-Fine-tuning models for domain-specific tasks, building agentic frameworks, and integrating LLMs into real engineering workflows — from automated test generation to company-wide AI orchestration.
+### AI Engineering + Agentic Systems
+- [qa-intelligence-platform](https://github.com/arvind3/qa-intelligence-platform) - LLM-oriented QA orchestration and intelligent testing workflows.
 
-**Test Automation & QA Intelligence**
-Robot Framework from the ground up: IDE tooling, skill packages, fine-tuned models for test generation, and full QA intelligence platforms that turn test results into actionable quality signals.
+### Quality Engineering + Automation Intelligence
+- [robot-finetune-model](https://github.com/arvind3/robot-finetune-model) - Fine-tuned model for Robot Framework test generation.
 
-**Retail & Supply Chain Analytics**
-End-to-end analytics infrastructure covering merchandising strategy, supply chain core concepts, and brand performance measurement — built for operational use, not just dashboards.
+### Analytics for Retail + Supply Chain
+- [retail_analytics](https://github.com/arvind3/retail_analytics) - Retail analytics patterns for merchandising and operations.
 
-**Developer Tooling & Process Automation**
-Process flow tooling, code intelligence engines, and workflow automation designed to reduce friction for engineering teams and reduce time-to-signal on complex operations.
-
----
-
-## Deep Metrics
-
-<div align="center">
-
-<img src="./assets/metrics-languages.svg" alt="Language Breakdown" width="860" />
-
-</div>
-
-<div align="center">
-
-<img src="./assets/metrics-activity.svg" alt="Recent Activity" width="860" />
-
-</div>
+### Developer Productivity + Validation Pipelines
+- [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation) - Automated collection, analysis, and publishing of engineering-brand metrics.
 
 ---
 
-## Contribution Activity
+## Recent Activity (Auto-updated)
+
+<!-- DYNAMIC:ACTIVITY:START -->
+- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
+- 2026-03-08 - [Created branch in arvind3/arvind3](https://github.com/arvind3/arvind3)
+- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
+- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
+- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
+<!-- DYNAMIC:ACTIVITY:END -->
+
+---
+
+## GitHub Stats
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/contributions-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/contributions-snake.svg" />
-  <img alt="Contribution snake animation" src="./assets/contributions-snake-dark.svg" />
-</picture>
+<img src="https://github-readme-stats.vercel.app/api?username=arvind3&show_icons=true&rank_icon=github&include_all_commits=true&hide_border=true" alt="GitHub stats for arvind3" />
+<img src="https://streak-stats.demolab.com?user=arvind3&hide_border=true" alt="GitHub streak for arvind3" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arvind3&layout=compact&hide_border=true" alt="Top languages for arvind3" />
 
 </div>
 
 ---
 
+## Contribution Snake
+
 <div align="center">
 
-<sub>Dashboard auto-updated via GitHub Actions &nbsp;·&nbsp; lowlighter/metrics &nbsp;·&nbsp; Platane/snk</sub>
+![Contribution snake](./assets/contributions-snake.svg)
+
+</div>
+
+---
+
+<div align="center">
+
+Dashboard auto-updated via GitHub Actions.
+
+<!-- DYNAMIC:LAST_UPDATED:START -->
+Last refreshed: 2026-03-08
+<!-- DYNAMIC:LAST_UPDATED:END -->
 
 </div>
