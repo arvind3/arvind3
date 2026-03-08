@@ -6,6 +6,20 @@ const OUTPUT_DIR = path.join(process.cwd(), '.generated');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'top-repos.json');
 const USERNAME = process.env.GITHUB_USERNAME || 'arvind3';
 const MAX_REPOS = Number(process.env.TOP_REPOS_COUNT || 6);
+const EXCLUDED_REPOS = new Set([
+  'arvind3',
+  'test',
+  'semprademo-test',
+  'upptime',
+]);
+const STRATEGIC_PRIORITY = [
+  'qa-intelligence-platform',
+  'brand-analytics-automation',
+  'robot-finetune-model',
+  'retail_analytics',
+  'RobotFrameworkBookWithIDE',
+  'brand-analytics-dashboard',
+];
 
 function parseRateLimitReset(headers) {
   const reset = headers.get('x-ratelimit-reset');
@@ -56,15 +70,21 @@ function scoreRepository(repo) {
   const activityScore = Math.max(0, 90 - ageDays);
   const stars = Number(repo.stargazers_count || 0);
   const forks = Number(repo.forks_count || 0);
+  const nameAndDescription = `${repo.name} ${repo.description || ''}`.toLowerCase();
+  const strategicIndex = STRATEGIC_PRIORITY.findIndex((entry) => entry.toLowerCase() === repo.name.toLowerCase());
+  const strategicBoost = strategicIndex >= 0 ? (STRATEGIC_PRIORITY.length - strategicIndex) * 500 : 0;
+  const domainBoost = /(ai|qa|analytics|robot|retail|supply|playwright|playwrite|brand)/i.test(nameAndDescription)
+    ? 80
+    : 0;
 
-  return stars * 100 + forks * 10 + activityScore;
+  return stars * 100 + forks * 10 + activityScore + strategicBoost + domainBoost;
 }
 
 async function main() {
   const repos = await githubRequest(`https://api.github.com/users/${USERNAME}/repos?per_page=100&type=owner&sort=updated`);
 
   const ranked = repos
-    .filter((repo) => !repo.fork && !repo.archived)
+    .filter((repo) => !repo.fork && !repo.archived && !EXCLUDED_REPOS.has(repo.name))
     .map((repo) => ({
       name: repo.name,
       fullName: repo.full_name,

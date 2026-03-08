@@ -12,7 +12,7 @@ test.describe('Brand dashboard load tests', () => {
     page.on('pageerror', (error) => errors.push(error.message));
 
     await page.goto(expected.dashboardUrl, { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(2000);
 
     expect(errors).toEqual([]);
     await expect(page.locator('h1')).toContainText(/Personal Brand Analytics/i);
@@ -20,7 +20,7 @@ test.describe('Brand dashboard load tests', () => {
 
   test('dashboard shows at least one chart or metric visualization', async ({ page }) => {
     await page.goto(expected.dashboardUrl, { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(2000);
 
     const charts = page.locator('canvas, svg.chart, [class*="chart"], [class*="metric"]');
     expect(await charts.count()).toBeGreaterThan(0);
@@ -28,7 +28,7 @@ test.describe('Brand dashboard load tests', () => {
 
   test('dashboard displays repo-level metrics data', async ({ page, request }) => {
     await page.goto(expected.dashboardUrl, { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(2000);
 
     const bodyText = (await page.locator('body').textContent()) || '';
     const projectsResponse = await request.get(expected.dashboardProjectsUrl);

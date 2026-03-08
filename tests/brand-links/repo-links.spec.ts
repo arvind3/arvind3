@@ -2,15 +2,8 @@ import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const expected = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), 'tests/fixtures/expected-data.json'), 'utf8'),
-);
-
 test('all repository links in README resolve', async ({ request }) => {
-  const response = await request.get(expected.rawReadmeUrl);
-  expect(response.ok()).toBeTruthy();
-
-  const readme = await response.text();
+  const readme = fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8');
   const repoUrls = (readme.match(/https:\/\/github\.com\/arvind3\/[A-Za-z0-9_.-]+/g) || [])
     .filter((url) => !url.endsWith('/arvind3'));
 

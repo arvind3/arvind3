@@ -46,33 +46,33 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 <!-- DYNAMIC:REPOS:START -->
 <div align="center">
 
-<a href="https://github.com/arvind3/arvind3">
-  <img src="https://gh-card.dev/repos/arvind3/arvind3.svg?fullname=1" alt="arvind3" />
-</a>
-<a href="https://github.com/arvind3/merchandising-core-concepts-for-grocery-business">
-  <img src="https://gh-card.dev/repos/arvind3/merchandising-core-concepts-for-grocery-business.svg?fullname=1" alt="merchandising-core-concepts-for-grocery-business" />
-</a>
-<a href="https://github.com/arvind3/supplychain-coreconcepts-for-grocery-business">
-  <img src="https://gh-card.dev/repos/arvind3/supplychain-coreconcepts-for-grocery-business.svg?fullname=1" alt="supplychain-coreconcepts-for-grocery-business" />
+<a href="https://github.com/arvind3/qa-intelligence-platform">
+  <img src="https://gh-card.dev/repos/arvind3/qa-intelligence-platform.svg?fullname=1" alt="qa-intelligence-platform" />
 </a>
 <a href="https://github.com/arvind3/brand-analytics-automation">
   <img src="https://gh-card.dev/repos/arvind3/brand-analytics-automation.svg?fullname=1" alt="brand-analytics-automation" />
 </a>
+<a href="https://github.com/arvind3/robot-finetune-model">
+  <img src="https://gh-card.dev/repos/arvind3/robot-finetune-model.svg?fullname=1" alt="robot-finetune-model" />
+</a>
+<a href="https://github.com/arvind3/retail_analytics">
+  <img src="https://gh-card.dev/repos/arvind3/retail_analytics.svg?fullname=1" alt="retail_analytics" />
+</a>
 <a href="https://github.com/arvind3/RobotFrameworkBookWithIDE">
   <img src="https://gh-card.dev/repos/arvind3/RobotFrameworkBookWithIDE.svg?fullname=1" alt="RobotFrameworkBookWithIDE" />
 </a>
-<a href="https://github.com/arvind3/upptime">
-  <img src="https://gh-card.dev/repos/arvind3/upptime.svg?fullname=1" alt="upptime" />
+<a href="https://github.com/arvind3/brand-analytics-dashboard">
+  <img src="https://gh-card.dev/repos/arvind3/brand-analytics-dashboard.svg?fullname=1" alt="brand-analytics-dashboard" />
 </a>
 
 </div>
 
-1. [arvind3](https://github.com/arvind3/arvind3) - No description yet (TypeScript)
-2. [merchandising-core-concepts-for-grocery-business](https://github.com/arvind3/merchandising-core-concepts-for-grocery-business) - Merchandising Core Concepts for the Grocery Business (HTML)
-3. [supplychain-coreconcepts-for-grocery-business](https://github.com/arvind3/supplychain-coreconcepts-for-grocery-business) - No description yet (TypeScript)
-4. [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation) - Automated brand analytics and performance monitoring (JavaScript)
+1. [qa-intelligence-platform](https://github.com/arvind3/qa-intelligence-platform) - AI-powered QA intelligence platform for automated test analysis (TypeScript)
+2. [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation) - Automated brand analytics and performance monitoring (JavaScript)
+3. [robot-finetune-model](https://github.com/arvind3/robot-finetune-model) - Fine-tuned AI model for automated Robot Framework test generation (Python)
+4. [retail_analytics](https://github.com/arvind3/retail_analytics) - Retail analytics platform for merchandising and supply chain insights (TypeScript)
 5. [RobotFrameworkBookWithIDE](https://github.com/arvind3/RobotFrameworkBookWithIDE) - Robot Framework book with integrated IDE tooling (TypeScript)
-6. [upptime](https://github.com/arvind3/upptime) - No description yet (n/a)
+6. [brand-analytics-dashboard](https://github.com/arvind3/brand-analytics-dashboard) - Brand analytics dashboard (JavaScript)
 <!-- DYNAMIC:REPOS:END -->
 
 ---
@@ -96,10 +96,10 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 ## Recent Activity (Auto-updated)
 
 <!-- DYNAMIC:ACTIVITY:START -->
+- 2026-03-08 - [merged PR: arvind3/arvind3](https://github.com/arvind3/arvind3/pulls)
 - 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
+- 2026-03-08 - [opened PR: arvind3/arvind3](https://github.com/arvind3/arvind3/pulls)
 - 2026-03-08 - [Created branch in arvind3/arvind3](https://github.com/arvind3/arvind3)
-- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
-- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
 - 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
 <!-- DYNAMIC:ACTIVITY:END -->
 
