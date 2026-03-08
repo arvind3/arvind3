@@ -1,11 +1,20 @@
 {
-  "name": "arvind3-profile-tests",
+  "name": "arvind3-profile",
   "private": true,
+  "type": "module",
   "scripts": {
     "test": "npx playwright test",
-    "test:headed": "npx playwright test --headed"
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:profile": "npx playwright test tests/brand-profile/",
+    "test:dashboard": "npx playwright test tests/brand-dashboard/",
+    "test:links": "npx playwright test tests/brand-links/",
+    "test:seo": "npx playwright test tests/brand-seo/",
+    "test:mobile": "npx playwright test --project=mobile-safari",
+    "test:report": "npx playwright show-report",
+    "update-readme": "node scripts/fetch-dashboard-metrics.js && node scripts/fetch-top-repos.js && node scripts/fetch-recent-activity.js && node scripts/inject-readme.js"
   },
   "devDependencies": {
-    "@playwright/test": "^1.58.2"
+    "@playwright/test": "^1.49.0"
   }
 }

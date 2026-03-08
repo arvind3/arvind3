@@ -2,9 +2,12 @@
 
 # Arvind Bhardwaj
 
-**AI Engineering &nbsp;·&nbsp; Test Automation &nbsp;·&nbsp; Retail & Supply Chain Analytics**
+**AI Engineering &nbsp;·&nbsp; Test Automation & QA Intelligence &nbsp;·&nbsp; Retail & Supply Chain Analytics**
 
-Houston, Texas &nbsp;·&nbsp; [Twitter / @arvindkbhardwaj](https://twitter.com/arvindkbhardwaj)
+Houston, Texas &nbsp;·&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arvindkumarbhardwaj/)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/arvindkbhardwaj)
+[![Dashboard](https://img.shields.io/badge/Brand%20Analytics-Live-brightgreen?style=flat)](https://arvind3.github.io/brand-analytics-dashboard/)
 
 </div>
 
@@ -14,7 +17,76 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 
 ---
 
-## GitHub Activity
+## Live Dashboard
+
+**[Brand Analytics Dashboard](https://arvind3.github.io/brand-analytics-dashboard/)** — a unified Google Analytics 4 + GTM intelligence platform that surfaces the real-world impact of every GitHub repo and project. It aggregates GA4 event data across all properties through a Cloudflare Worker proxy, runs automated repo discovery to keep coverage current, and deploys a central metrics dashboard on GitHub Pages. Built with Node.js; zero manual configuration once the workflow is running.
+
+→ [View live dashboard](https://arvind3.github.io/brand-analytics-dashboard/) &nbsp;·&nbsp; [Source: brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation)
+
+<!-- DYNAMIC:METRICS:START -->
+<!-- auto-generated: dashboard metrics — updated daily via GitHub Actions -->
+<!-- DYNAMIC:METRICS:END -->
+
+---
+
+## Featured Projects
+
+<div align="center">
+
+<a href="https://github.com/arvind3/qa-intelligence-platform">
+  <img src="https://gh-card.dev/repos/arvind3/qa-intelligence-platform.svg?fullname=1&theme=dark_dimmed" alt="qa-intelligence-platform" />
+</a>
+<a href="https://github.com/arvind3/RobotFrameworkBookWithIDE">
+  <img src="https://gh-card.dev/repos/arvind3/RobotFrameworkBookWithIDE.svg?fullname=1&theme=dark_dimmed" alt="RobotFrameworkBookWithIDE" />
+</a>
+
+<a href="https://github.com/arvind3/retail_analytics">
+  <img src="https://gh-card.dev/repos/arvind3/retail_analytics.svg?fullname=1&theme=dark_dimmed" alt="retail_analytics" />
+</a>
+<a href="https://github.com/arvind3/robot-finetune-model">
+  <img src="https://gh-card.dev/repos/arvind3/robot-finetune-model.svg?fullname=1&theme=dark_dimmed" alt="robot-finetune-model" />
+</a>
+
+<a href="https://github.com/arvind3/brand-analytics-automation">
+  <img src="https://gh-card.dev/repos/arvind3/brand-analytics-automation.svg?fullname=1&theme=dark_dimmed" alt="brand-analytics-automation" />
+</a>
+<a href="https://github.com/arvind3/founder-os">
+  <img src="https://gh-card.dev/repos/arvind3/founder-os.svg?fullname=1&theme=dark_dimmed" alt="founder-os" />
+</a>
+
+</div>
+
+<!-- DYNAMIC:REPOS:START -->
+<!-- auto-generated: top repos by stars/activity — updated weekly via GitHub Actions -->
+<!-- DYNAMIC:REPOS:END -->
+
+---
+
+## Focus Areas
+
+**AI Engineering & LLM Agents**
+Fine-tuning models for domain-specific tasks, building agentic frameworks, and integrating LLMs into real engineering workflows — from automated test generation to company-wide AI orchestration. → [qa-intelligence-platform](https://github.com/arvind3/qa-intelligence-platform)
+
+**Test Automation & QA Intelligence**
+Robot Framework from the ground up: IDE tooling, skill packages, fine-tuned models for test generation, and full QA intelligence platforms that turn test results into actionable quality signals. → [RobotFrameworkBookWithIDE](https://github.com/arvind3/RobotFrameworkBookWithIDE)
+
+**Retail & Supply Chain Analytics**
+End-to-end analytics infrastructure covering merchandising strategy, supply chain core concepts, and brand performance measurement — built for operational use, not just dashboards. → [retail_analytics](https://github.com/arvind3/retail_analytics)
+
+**Developer Tooling & Process Automation**
+Process flow tooling, code intelligence engines, and workflow automation designed to reduce friction for engineering teams and reduce time-to-signal on complex operations. → [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation)
+
+---
+
+## Recent Activity
+
+<!-- DYNAMIC:ACTIVITY:START -->
+<!-- auto-generated: last 5 public events — updated daily via GitHub Actions -->
+<!-- DYNAMIC:ACTIVITY:END -->
+
+---
+
+## GitHub Stats
 
 <div align="center">
 
@@ -37,59 +109,6 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 <img src="./assets/metrics-isocalendar.svg" alt="Contribution Calendar" width="860" />
 
 </div>
-
----
-
-## Featured Work
-
-<div align="center">
-
-<a href="https://github.com/arvind3/qa-intelligence-platform">
-  <img src="https://gh-card.dev/repos/arvind3/qa-intelligence-platform.svg?fullname=1&theme=dark_dimmed" alt="qa-intelligence-platform" />
-</a>
-<a href="https://github.com/arvind3/RobotFrameworkBookWithIDE">
-  <img src="https://gh-card.dev/repos/arvind3/RobotFrameworkBookWithIDE.svg?fullname=1&theme=dark_dimmed" alt="RobotFrameworkBookWithIDE" />
-</a>
-
-<a href="https://github.com/arvind3/retail_analytics">
-  <img src="https://gh-card.dev/repos/arvind3/retail_analytics.svg?fullname=1&theme=dark_dimmed" alt="retail_analytics" />
-</a>
-<a href="https://github.com/arvind3/robot-finetune-model">
-  <img src="https://gh-card.dev/repos/arvind3/robot-finetune-model.svg?fullname=1&theme=dark_dimmed" alt="robot-finetune-model" />
-</a>
-
-<a href="https://github.com/arvind3/founder-os">
-  <img src="https://gh-card.dev/repos/arvind3/founder-os.svg?fullname=1&theme=dark_dimmed" alt="founder-os" />
-</a>
-<a href="https://github.com/arvind3/brand-analytics-automation">
-  <img src="https://gh-card.dev/repos/arvind3/brand-analytics-automation.svg?fullname=1&theme=dark_dimmed" alt="brand-analytics-automation" />
-</a>
-
-</div>
-
----
-
-## Live Dashboard
-
-**[Brand Analytics Dashboard](https://arvind3.github.io/brand-analytics-automation/)** — a unified Google Analytics 4 + GTM intelligence platform that surfaces the real-world impact of every GitHub repo and project. It aggregates GA4 event data across all properties through a Cloudflare Worker proxy, runs automated repo discovery to keep coverage current, and deploys a central metrics dashboard on GitHub Pages. Built with Node.js; zero manual configuration once the workflow is running.
-
-→ [View live dashboard](https://arvind3.github.io/brand-analytics-automation/) &nbsp;·&nbsp; [Source: brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation)
-
----
-
-## Focus Areas
-
-**AI Engineering & LLM Agents**
-Fine-tuning models for domain-specific tasks, building agentic frameworks, and integrating LLMs into real engineering workflows — from automated test generation to company-wide AI orchestration.
-
-**Test Automation & QA Intelligence**
-Robot Framework from the ground up: IDE tooling, skill packages, fine-tuned models for test generation, and full QA intelligence platforms that turn test results into actionable quality signals.
-
-**Retail & Supply Chain Analytics**
-End-to-end analytics infrastructure covering merchandising strategy, supply chain core concepts, and brand performance measurement — built for operational use, not just dashboards.
-
-**Developer Tooling & Process Automation**
-Process flow tooling, code intelligence engines, and workflow automation designed to reduce friction for engineering teams and reduce time-to-signal on complex operations.
 
 ---
 
@@ -125,6 +144,6 @@ Process flow tooling, code intelligence engines, and workflow automation designe
 
 <div align="center">
 
-<sub>Dashboard auto-updated via GitHub Actions &nbsp;·&nbsp; lowlighter/metrics &nbsp;·&nbsp; Platane/snk</sub>
+<sub>Dashboard auto-updated via GitHub Actions &nbsp;·&nbsp; lowlighter/metrics &nbsp;·&nbsp; Platane/snk &nbsp;·&nbsp; Last refreshed: <!-- DYNAMIC:TIMESTAMP -->never<!-- /DYNAMIC:TIMESTAMP --></sub>
 
 </div>

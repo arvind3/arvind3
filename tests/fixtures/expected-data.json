@@ -1,0 +1,47 @@
+{
+  "profile": {
+    "username": "arvind3",
+    "displayName": "Arvind Bhardwaj",
+    "profileUrl": "https://github.com/arvind3",
+    "dashboardUrl": "https://arvind3.github.io/brand-analytics-dashboard/",
+    "twitterHandle": "arvindkbhardwaj",
+    "linkedInPath": "in/arvindkumarbhardwaj"
+  },
+  "readme": {
+    "requiredSections": [
+      "Arvind Bhardwaj",
+      "Live Dashboard",
+      "Featured Projects",
+      "Focus Areas",
+      "Recent Activity",
+      "GitHub Stats",
+      "Contribution Metrics",
+      "Deep Metrics",
+      "Contribution Activity"
+    ],
+    "dynamicMarkers": [
+      "DYNAMIC:METRICS",
+      "DYNAMIC:REPOS",
+      "DYNAMIC:ACTIVITY",
+      "DYNAMIC:TIMESTAMP"
+    ],
+    "expectedPinCardCount": 6,
+    "expectedMinSvgAssets": 4
+  },
+  "dashboard": {
+    "url": "https://arvind3.github.io/brand-analytics-dashboard/",
+    "expectedContentKeywords": ["brand-analytics", "qa-intelligence", "retail"],
+    "minChartCount": 1
+  },
+  "repos": {
+    "featured": [
+      "qa-intelligence-platform",
+      "RobotFrameworkBookWithIDE",
+      "retail_analytics",
+      "robot-finetune-model",
+      "brand-analytics-automation",
+      "founder-os"
+    ],
+    "banned": ["test"]
+  }
+}
