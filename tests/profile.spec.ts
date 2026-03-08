@@ -4,13 +4,6 @@ import * as path from 'path';
 
 const PROFILE_URL = 'https://github.com/arvind3';
 
-// GitHub proxies external images through camo.githubusercontent.com.
-// The original URL is stored in the data-canonical-src attribute.
-// This helper resolves the original URL for matching.
-function getOriginalSrc(img: HTMLImageElement): string {
-  return img.getAttribute('data-canonical-src') || img.src || '';
-}
-
 test.describe('GitHub Profile: arvind3', () => {
 
   test('profile page loads', async ({ page }) => {
@@ -50,19 +43,16 @@ test.describe('GitHub Profile: arvind3', () => {
 
     const readme = page.locator('[data-target="readme-toc.content"], .markdown-body').first();
 
-    const results = await readme.evaluate((container, getOriginalSrcFn) => {
-      // eslint-disable-next-line no-new-func
-      const resolveOriginal = new Function('img', `return (${getOriginalSrcFn})(img)`);
+    const results = await readme.evaluate((container) => {
       const imgs = Array.from(container.querySelectorAll('img'));
       return imgs.map(img => ({
         originalSrc: img.getAttribute('data-canonical-src') || img.src || '',
-        proxiedSrc: img.src,
         alt: img.alt || '',
         complete: img.complete,
         naturalWidth: img.naturalWidth,
         broken: !img.complete || img.naturalWidth === 0,
       }));
-    }, getOriginalSrc.toString());
+    });
 
     const broken = results.filter(r => r.broken);
     const loaded = results.filter(r => !r.broken);
@@ -76,70 +66,6 @@ test.describe('GitHub Profile: arvind3', () => {
     console.log('=======================================================\n');
 
     expect(broken, `${broken.length} broken image(s):\n${broken.map(b => `  - ${b.alt || b.originalSrc}`).join('\n')}`).toHaveLength(0);
-  });
-
-  test('github-readme-stats cards load (stats + top-langs)', async ({ page }) => {
-    await page.goto(PROFILE_URL, { waitUntil: 'domcontentloaded' });
-    await page.waitForTimeout(8000);
-
-    const readme = page.locator('[data-target="readme-toc.content"], .markdown-body').first();
-
-    const cards = await readme.evaluate((container) => {
-      const imgs = Array.from(container.querySelectorAll('img'));
-      return imgs
-        .filter(img => {
-          const src = img.getAttribute('data-canonical-src') || img.src || '';
-          return src.includes('github-readme-stats') && !src.includes('/pin/');
-        })
-        .map(img => ({
-          originalSrc: img.getAttribute('data-canonical-src') || img.src,
-          alt: img.alt,
-          loaded: img.complete && img.naturalWidth > 0,
-          naturalWidth: img.naturalWidth,
-        }));
-    });
-
-    console.log(`\n=== github-readme-stats main cards (${cards.length} found) ===`);
-    cards.forEach(c => console.log(`  ${c.loaded ? '✓' : '✗'} ${c.alt} [w=${c.naturalWidth}]`));
-    console.log('============================================================\n');
-
-    expect(cards.length, 'Expected at least 2 stats cards (stats + top-langs)').toBeGreaterThanOrEqual(2);
-    const broken = cards.filter(c => !c.loaded);
-    expect(broken, `${broken.length} stats card(s) failed to load`).toHaveLength(0);
-  });
-
-  test('repo pin cards render (6 expected)', async ({ page }) => {
-    await page.goto(PROFILE_URL, { waitUntil: 'domcontentloaded' });
-    await page.waitForTimeout(8000);
-
-    const readme = page.locator('[data-target="readme-toc.content"], .markdown-body').first();
-
-    const pinCards = await readme.evaluate((container) => {
-      const imgs = Array.from(container.querySelectorAll('img'));
-      return imgs
-        .filter(img => {
-          const src = img.getAttribute('data-canonical-src') || img.src || '';
-          return src.includes('/api/pin/') || src.includes('github-readme-stats') && img.alt !== 'GitHub Stats' && img.alt !== 'Top Languages';
-        })
-        .filter(img => {
-          const src = img.getAttribute('data-canonical-src') || img.src || '';
-          return src.includes('/pin/');
-        })
-        .map(img => ({
-          repo: (img.getAttribute('data-canonical-src') || '').match(/repo=([^&]+)/)?.[1] || img.alt,
-          alt: img.alt,
-          loaded: img.complete && img.naturalWidth > 0,
-          naturalWidth: img.naturalWidth,
-        }));
-    });
-
-    console.log(`\n=== Repo pin cards (${pinCards.length} found, 6 expected) ===`);
-    pinCards.forEach(c => console.log(`  ${c.loaded ? '✓' : '✗'} ${c.repo} [w=${c.naturalWidth}]`));
-    console.log('===========================================================\n');
-
-    expect(pinCards, 'Expected 6 repo pin cards').toHaveLength(6);
-    const broken = pinCards.filter(c => !c.loaded);
-    expect(broken, `${broken.length} pin card(s) failed to load`).toHaveLength(0);
   });
 
   test('streak stats card loads', async ({ page }) => {
@@ -174,6 +100,36 @@ test.describe('GitHub Profile: arvind3', () => {
     expect(streakCard!.loaded, 'Streak card failed to load').toBe(true);
   });
 
+  test('repo pin cards render (6 expected via gh-card.dev)', async ({ page }) => {
+    await page.goto(PROFILE_URL, { waitUntil: 'domcontentloaded' });
+    await page.waitForTimeout(8000);
+
+    const readme = page.locator('[data-target="readme-toc.content"], .markdown-body').first();
+
+    const pinCards = await readme.evaluate((container) => {
+      const imgs = Array.from(container.querySelectorAll('img'));
+      return imgs
+        .filter(img => {
+          const src = img.getAttribute('data-canonical-src') || img.src || '';
+          return src.includes('gh-card.dev');
+        })
+        .map(img => ({
+          repo: (img.getAttribute('data-canonical-src') || '').match(/repos\/[^/]+\/([^.]+)/)?.[1] || img.alt,
+          alt: img.alt,
+          loaded: img.complete && img.naturalWidth > 0,
+          naturalWidth: img.naturalWidth,
+        }));
+    });
+
+    console.log(`\n=== Repo pin cards via gh-card.dev (${pinCards.length} found, 6 expected) ===`);
+    pinCards.forEach(c => console.log(`  ${c.loaded ? '✓' : '✗'} ${c.repo} [w=${c.naturalWidth}]`));
+    console.log('===========================================================\n');
+
+    expect(pinCards, 'Expected 6 repo pin cards').toHaveLength(6);
+    const broken = pinCards.filter(c => !c.loaded);
+    expect(broken, `${broken.length} pin card(s) failed to load`).toHaveLength(0);
+  });
+
   test('lowlighter SVG assets load', async ({ page }) => {
     await page.goto(PROFILE_URL, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(8000);
@@ -184,7 +140,7 @@ test.describe('GitHub Profile: arvind3', () => {
       const imgs = Array.from(container.querySelectorAll('img'));
       return imgs
         .filter(img => {
-          const src = img.getAttribute('data-canonical-src') || img.src || img.getAttribute('src') || '';
+          const src = img.getAttribute('data-canonical-src') || img.getAttribute('src') || img.src || '';
           return src.includes('assets/') && src.includes('.svg');
         })
         .map(img => ({

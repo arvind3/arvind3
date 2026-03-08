@@ -18,13 +18,6 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=arvind3&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="GitHub Stats" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arvind3&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&cache_seconds=86400" alt="Top Languages" />
-
-</div>
-
-<div align="center">
-
 <img src="https://streak-stats.demolab.com?user=arvind3&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="GitHub Streak" />
 
 </div>
@@ -52,24 +45,24 @@ Building systems at the intersection of AI and software quality. I work on LLM a
 <div align="center">
 
 <a href="https://github.com/arvind3/qa-intelligence-platform">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=arvind3&repo=qa-intelligence-platform&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="qa-intelligence-platform" />
+  <img src="https://gh-card.dev/repos/arvind3/qa-intelligence-platform.svg?fullname=1&theme=dark_dimmed" alt="qa-intelligence-platform" />
 </a>
 <a href="https://github.com/arvind3/RobotFrameworkBookWithIDE">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=arvind3&repo=RobotFrameworkBookWithIDE&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="RobotFrameworkBookWithIDE" />
+  <img src="https://gh-card.dev/repos/arvind3/RobotFrameworkBookWithIDE.svg?fullname=1&theme=dark_dimmed" alt="RobotFrameworkBookWithIDE" />
 </a>
 
 <a href="https://github.com/arvind3/retail_analytics">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=arvind3&repo=retail_analytics&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="retail_analytics" />
+  <img src="https://gh-card.dev/repos/arvind3/retail_analytics.svg?fullname=1&theme=dark_dimmed" alt="retail_analytics" />
 </a>
 <a href="https://github.com/arvind3/robot-finetune-model">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=arvind3&repo=robot-finetune-model&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="robot-finetune-model" />
+  <img src="https://gh-card.dev/repos/arvind3/robot-finetune-model.svg?fullname=1&theme=dark_dimmed" alt="robot-finetune-model" />
 </a>
 
 <a href="https://github.com/arvind3/founder-os">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=arvind3&repo=founder-os&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="founder-os" />
+  <img src="https://gh-card.dev/repos/arvind3/founder-os.svg?fullname=1&theme=dark_dimmed" alt="founder-os" />
 </a>
 <a href="https://github.com/arvind3/brand-analytics-automation">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=arvind3&repo=brand-analytics-automation&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="brand-analytics-automation" />
+  <img src="https://gh-card.dev/repos/arvind3/brand-analytics-automation.svg?fullname=1&theme=dark_dimmed" alt="brand-analytics-automation" />
 </a>
 
 </div>
