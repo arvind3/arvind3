@@ -1,0 +1,85 @@
+name: Update Dynamic Profile
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch dashboard metrics
+        run: node scripts/fetch-dashboard-metrics.js
+
+      - name: Fetch top repositories
+        run: node scripts/fetch-top-repos.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch recent activity
+        run: node scripts/fetch-recent-activity.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Inject README dynamic content
+        run: node scripts/inject-readme.js
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: arvind3
+          outputs: |
+            assets/contributions-snake.svg?color_snake=58a6ff&color_dots[]=ebedf0,#9be9a8,#40c463,#30a14e,#216e39
+            assets/contributions-snake-dark.svg?color_snake=58a6ff&color_dots[]=0d1117,#0d3b6e,#1a5f9e,#2380ce,#58a6ff
+
+      - name: Commit and push if changed
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'README.md assets/contributions-snake*.svg .generated/*.json'
+          message: 'chore(profile): refresh dynamic README sections'
+          default_author: github_actions
+
+  validate:
+    needs: update-readme
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Wait for GitHub Pages deploy
+        run: sleep 60
+
+      - name: Run post-update validation
+        run: npx playwright test tests/brand-profile/ tests/brand-links/

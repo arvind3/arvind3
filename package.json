@@ -1,9 +1,26 @@
 {
   "name": "arvind3-profile-tests",
   "private": true,
+  "version": "1.0.0",
+  "description": "Dynamic GitHub profile automation and brand validation tests",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
+    "dynamic:metrics": "node scripts/fetch-dashboard-metrics.js",
+    "dynamic:repos": "node scripts/fetch-top-repos.js",
+    "dynamic:activity": "node scripts/fetch-recent-activity.js",
+    "dynamic:inject": "node scripts/inject-readme.js",
+    "dynamic:update": "npm run dynamic:metrics && npm run dynamic:repos && npm run dynamic:activity && npm run dynamic:inject",
     "test": "npx playwright test",
-    "test:headed": "npx playwright test --headed"
+    "test:brand-profile": "npx playwright test tests/brand-profile/",
+    "test:brand-dashboard": "npx playwright test tests/brand-dashboard/",
+    "test:brand-links": "npx playwright test tests/brand-links/",
+    "test:brand-seo": "npx playwright test tests/brand-seo/",
+    "test:ui": "npx playwright test --ui",
+    "test:headed": "npx playwright test --headed",
+    "test:mobile": "npx playwright test --project=mobile-safari",
+    "report": "npx playwright show-report"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2"

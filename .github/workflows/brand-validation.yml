@@ -1,0 +1,78 @@
+name: Brand Validation
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'playwright.config.ts'
+      - 'package.json'
+      - '.github/workflows/brand-validation.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'playwright.config.ts'
+      - 'package.json'
+      - '.github/workflows/brand-validation.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-brand:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium webkit
+
+      - name: Run brand validation tests
+        run: npx playwright test
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: brand-validation-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 30
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: brand-screenshots
+          path: test-results/*.png
+          retention-days: 30
+
+      - name: Create issue on failure
+        if: failure() && github.event_name != 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Brand validation failed',
+              body: `Brand validation tests failed on ${new Date().toISOString()}.\n\nSee [workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for details.`,
+              labels: ['brand', 'automated']
+            });
