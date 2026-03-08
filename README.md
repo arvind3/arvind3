@@ -105,14 +105,39 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 
 ---
 
-## GitHub Stats
+## GitHub Signal Board
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=arvind3&show_icons=true&rank_icon=github&include_all_commits=true&hide_border=true" alt="GitHub stats for arvind3" />
-<img src="https://streak-stats.demolab.com?user=arvind3&hide_border=true" alt="GitHub streak for arvind3" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arvind3&layout=compact&hide_border=true" alt="Top languages for arvind3" />
+[![AI Engineering](https://img.shields.io/badge/AI%20Engineering-Agentic%20Systems-0EA5E9?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/arvind3/qa-intelligence-platform)
+[![QA Intelligence](https://img.shields.io/badge/QA%20Intelligence-Automation%20at%20Scale-F97316?style=for-the-badge&logo=playwright&logoColor=white)](https://github.com/arvind3/robot-finetune-model)
+[![Analytics](https://img.shields.io/badge/Analytics-Measurable%20Engineering-16A34A?style=for-the-badge&logo=googleanalytics&logoColor=white)](https://github.com/arvind3/brand-analytics-dashboard)
 
+</div>
+
+<table>
+  <tr>
+    <td width="64%" valign="top">
+      <a href="https://github.com/arvind3">
+        <img src="./assets/github-metrics.svg" alt="GitHub overview metrics for arvind3" width="100%" />
+      </a>
+    </td>
+    <td width="36%" valign="top">
+      <a href="https://github.com/arvind3">
+        <img src="./assets/metrics-languages.svg" alt="Language breakdown for arvind3" width="100%" />
+      </a>
+      <br />
+      <a href="https://github.com/arvind3">
+        <img src="./assets/metrics-activity.svg" alt="Recent activity snapshot for arvind3" width="100%" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <a href="https://github.com/arvind3">
+    <img src="./assets/metrics-isocalendar.svg" alt="Contribution calendar for arvind3" width="100%" />
+  </a>
 </div>
 
 ---
