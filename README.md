@@ -107,9 +107,6 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 
 ## GitHub Stats
 
-<div align="center">
-</div>
-
 High-signal view of contribution volume, language mix, recent activity, and calendar consistency. The cards below use repository-backed SVG assets so the section stays stable on the profile page.
 
 [![GitHub overview metrics for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/github-metrics.svg)](https://github.com/arvind3)
