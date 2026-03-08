@@ -17,9 +17,11 @@ test.describe('Profile README dynamic rendering', () => {
     expect(readme).not.toContain('<!-- auto-generated content here -->');
     expect(readme).toMatch(/pageviews|visitors|sessions/i);
     expect(readme).toMatch(/Top repos by traffic/i);
+    expect(readme).toContain('## GitHub Stats');
+    expect(readme).toContain('## GitHub Signal Board');
   });
 
-  test('GitHub signal board assets are referenced and available', async ({ request }) => {
+  test('GitHub stats assets are referenced and available', async ({ request }) => {
     const readme = fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8');
     const urls = readme.match(/https?:\/\/[^\s)>\"]+/g) || [];
     const imageUrls = [...new Set(urls)].filter((url) =>
@@ -43,7 +45,7 @@ test.describe('Profile README dynamic rendering', () => {
 
     for (const asset of localAssets) {
       expect(fs.existsSync(path.join(process.cwd(), asset)), `${asset} is missing`).toBe(true);
-      expect(readme).toContain(asset.replace('assets/', './assets/'));
+      expect(readme).toContain(`https://raw.githubusercontent.com/arvind3/arvind3/main/${asset}`);
     }
   });
 

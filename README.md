@@ -105,6 +105,23 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 
 ---
 
+## GitHub Stats
+
+High-signal view of contribution volume, language mix, recent activity, and calendar consistency. The cards below use repository-backed SVG assets so the section stays stable on the profile page.
+
+[![GitHub overview metrics for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/github-metrics.svg)](https://github.com/arvind3)
+
+[![Language breakdown for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/metrics-languages.svg)](https://github.com/arvind3)
+[![Recent activity snapshot for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/metrics-activity.svg)](https://github.com/arvind3)
+
+<div align="center">
+
+[![Contribution calendar for arvind3](https://raw.githubusercontent.com/arvind3/arvind3/main/assets/metrics-isocalendar.svg)](https://github.com/arvind3)
+
+</div>
+
+---
+
 ## GitHub Signal Board
 
 <div align="center">
@@ -115,30 +132,11 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 
 </div>
 
-<table>
-  <tr>
-    <td width="64%" valign="top">
-      <a href="https://github.com/arvind3">
-        <img src="./assets/github-metrics.svg" alt="GitHub overview metrics for arvind3" width="100%" />
-      </a>
-    </td>
-    <td width="36%" valign="top">
-      <a href="https://github.com/arvind3">
-        <img src="./assets/metrics-languages.svg" alt="Language breakdown for arvind3" width="100%" />
-      </a>
-      <br />
-      <a href="https://github.com/arvind3">
-        <img src="./assets/metrics-activity.svg" alt="Recent activity snapshot for arvind3" width="100%" />
-      </a>
-    </td>
-  </tr>
-</table>
+Three themes define the work shown across this profile:
 
-<div align="center">
-  <a href="https://github.com/arvind3">
-    <img src="./assets/metrics-isocalendar.svg" alt="Contribution calendar for arvind3" width="100%" />
-  </a>
-</div>
+- AI engineering: agentic workflows, evaluation loops, and LLM-backed product development.
+- QA intelligence: automation systems that turn test execution into actionable engineering insight.
+- Analytics: dashboards and measurement loops that make developer-brand and product signals visible.
 
 ---
 
