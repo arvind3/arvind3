@@ -2,26 +2,18 @@ import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const expected = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), 'tests/fixtures/expected-data.json'), 'utf8'),
-);
+test('shields.io badges resolve without errors', async ({ request }) => {
+  const readme = fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8');
+  const badgeUrls = readme.match(/https?:\/\/[^\s\)\]\>"]*shields\.io[^\s\)\]\>"]*/gi) || [];
+  const uniqueBadgeUrls = [...new Set(badgeUrls)];
 
-test('shields.io badges resolve without errors', async ({ page }) => {
-  await page.goto(expected.profileUrl, { waitUntil: 'domcontentloaded' });
+  expect(uniqueBadgeUrls.length).toBeGreaterThan(0);
 
-  const badges = page.locator(
-    'article.markdown-body img[src*="shields.io"], article.markdown-body img[src*="img.shields.io"]',
-  );
+  for (const url of uniqueBadgeUrls) {
+    const response = await request.get(url);
+    const body = await response.text();
 
-  const count = await badges.count();
-  expect(count).toBeGreaterThan(0);
-
-  for (let i = 0; i < count; i += 1) {
-    const badge = badges.nth(i);
-    const src = await badge.getAttribute('src');
-
-    await badge.scrollIntoViewIfNeeded();
-    const loaded = await badge.evaluate((element) => (element as HTMLImageElement).naturalWidth > 0);
-    expect(loaded, `Badge failed to load: ${src}`).toBe(true);
+    expect(response.status(), `Badge failed to load: ${url}`).toBeLessThan(400);
+    expect(body.toLowerCase()).not.toContain('invalid');
   }
 });

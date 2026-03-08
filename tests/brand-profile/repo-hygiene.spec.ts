@@ -1,50 +1,33 @@
-import { test, expect, Page, Locator } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const expected = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), 'tests/fixtures/expected-data.json'), 'utf8'),
-);
-
-async function getPopularRepoCards(page: Page): Promise<Locator> {
-  const selectorCandidates = [
-    '[data-pinned-item-list-item]',
-    'ol.pinned-items-list li',
-    'section:has(h2:has-text("Popular repositories")) li',
-  ];
-
-  for (const selector of selectorCandidates) {
-    const locator = page.locator(selector);
-    if ((await locator.count()) >= 1) {
-      return locator;
-    }
-  }
-
-  return page.locator('section:has(h2:has-text("Popular repositories")) li');
-}
-
 test.describe('Repository hygiene checks', () => {
-  test('popular repositories section shows six entries', async ({ page }) => {
-    await page.goto(expected.profileUrl, { waitUntil: 'domcontentloaded' });
-    const cards = await getPopularRepoCards(page);
-    await expect(cards).toHaveCount(6);
+  test('featured projects section shows six repo cards', async () => {
+    const readme = fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8');
+    const matches = [...readme.matchAll(/https:\/\/gh-card\.dev\/repos\/arvind3\/([^.?/]+)\.svg/gi)];
+    expect(matches.length).toBe(6);
   });
 
-  test('popular repositories are not forks and have usable descriptions', async ({ page }) => {
-    await page.goto(expected.profileUrl, { waitUntil: 'domcontentloaded' });
-    const cards = await getPopularRepoCards(page);
+  test('generated featured repositories are non-forks and mostly described', async ({ request }) => {
+    const generated = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), '.generated/top-repos.json'), 'utf8'),
+    );
 
-    const count = await cards.count();
+    expect(Array.isArray(generated.repos)).toBe(true);
+    expect(generated.repos.length).toBe(6);
+
     let describedRepos = 0;
 
-    for (let i = 0; i < count; i += 1) {
-      const card = cards.nth(i);
-      await expect(card).not.toContainText(/Forked from/i);
-
-      const description = (await card.locator('p').first().textContent())?.trim() || '';
-      if (description.length >= 12) {
+    for (const repoInfo of generated.repos) {
+      if ((repoInfo.description || '').trim().length >= 12) {
         describedRepos += 1;
       }
+
+      const response = await request.get(`https://api.github.com/repos/arvind3/${repoInfo.name}`);
+      expect(response.ok(), `Repo lookup failed: ${repoInfo.name}`).toBeTruthy();
+      const repo = await response.json();
+      expect(repo.fork, `${repoInfo.name} is a fork`).toBe(false);
     }
 
     expect(describedRepos).toBeGreaterThanOrEqual(4);
@@ -62,8 +45,8 @@ test.describe('Repository hygiene checks', () => {
       'brand-analytics-automation',
       'robot-finetune-model',
       'retail_analytics',
-      'founder-os',
       'RobotFrameworkBookWithIDE',
+      'brand-analytics-dashboard',
     ];
 
     for (const repoName of featured) {

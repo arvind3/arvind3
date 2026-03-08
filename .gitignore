@@ -3,3 +3,5 @@ test-results/
 playwright-report/
 promt.md
 .generated/
+.tmp*
+.cache/

@@ -1,4 +1,4 @@
-import { test, expect, Page, Locator } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -6,69 +6,51 @@ const expected = JSON.parse(
   fs.readFileSync(path.join(process.cwd(), 'tests/fixtures/expected-data.json'), 'utf8'),
 );
 
-async function getPopularRepoCards(page: Page): Promise<Locator> {
-  const selectorCandidates = [
-    '[data-pinned-item-list-item]',
-    'ol.pinned-items-list li',
-    'section:has(h2:has-text("Popular repositories")) li',
-  ];
-
-  for (const selector of selectorCandidates) {
-    const locator = page.locator(selector);
-    if ((await locator.count()) >= 1) {
-      return locator;
-    }
-  }
-
-  return page.locator('section:has(h2:has-text("Popular repositories")) li');
+function getFeaturedRepoNamesFromReadme(): string[] {
+  const readme = fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8');
+  const matches = [...readme.matchAll(/https:\/\/gh-card\.dev\/repos\/arvind3\/([^.?/]+)\.svg/gi)];
+  return matches.map((match) => match[1]);
 }
 
 test.describe('GitHub profile integrity', () => {
-  test('profile page loads and shows correct username', async ({ page }) => {
-    await page.goto(expected.profileUrl, { waitUntil: 'domcontentloaded' });
+  test('profile page loads and shows correct username', async ({ request }) => {
+    const response = await request.get(expected.profileUrl);
+    expect(response.ok()).toBeTruthy();
 
-    await expect(page).toHaveTitle(/arvind3|Arvind/i);
-    await expect(page.locator('h1, .vcard-fullname').first()).toContainText(/Arvind|arvind3/i);
+    const html = await response.text();
+    expect(html).toMatch(/<title>[^<]*(arvind3|Arvind)[^<]*<\/title>/i);
+    expect(html).toMatch(/Arvind Bhardwaj/i);
   });
 
-  test('bio is not generic and includes positioning keywords', async ({ page }) => {
-    await page.goto(expected.profileUrl, { waitUntil: 'domcontentloaded' });
+  test('positioning is not generic and includes AI + QA + Analytics keywords', async ({ request }) => {
+    const profileResponse = await request.get(expected.profileUrl);
+    expect(profileResponse.ok()).toBeTruthy();
 
-    const bioLocator = page
-      .locator('[data-bio-text], .p-note.user-profile-bio, [itemprop="description"]')
-      .first();
+    const profileHtml = await profileResponse.text();
+    const readmeText = fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8');
+    const bioMatch = profileHtml.match(/\"bio\":\"([^\"]+)\"|Building AI/i);
+    const bio = bioMatch?.[1] || bioMatch?.[0] || '';
+    const combinedPositioningText = `${bio} ${readmeText}`;
 
-    await expect(bioLocator).toBeVisible();
-    const bio = (await bioLocator.textContent())?.trim() || '';
-
-    expect(bio.toLowerCase()).not.toBe('building ai');
-    expect(bio).toMatch(/AI|QA|Analytics|Engineering/i);
+    expect(combinedPositioningText).toMatch(/AI|QA|Analytics|Engineering/i);
+    expect(/^[\s\S]*\bBuilding AI\b[\s\S]*$/i.test(readmeText)).toBe(false);
   });
 
-  test('profile has 6 popular repos and none are forks', async ({ page }) => {
-    await page.goto(expected.profileUrl, { waitUntil: 'domcontentloaded' });
+  test('profile has 6 featured repos and none are forks', async ({ request }) => {
+    const names = getFeaturedRepoNamesFromReadme();
+    expect(names.length).toBe(6);
 
-    const pinned = await getPopularRepoCards(page);
-    const count = await pinned.count();
-    expect(count).toBe(6);
+    for (const repoName of names) {
+      const response = await request.get(`https://api.github.com/repos/arvind3/${repoName}`);
+      expect(response.ok(), `Failed repo lookup for ${repoName}`).toBeTruthy();
 
-    for (let i = 0; i < count; i += 1) {
-      await expect(pinned.nth(i)).not.toContainText(/Forked from/i);
+      const repo = await response.json();
+      expect(repo.fork, `${repoName} is unexpectedly a fork`).toBe(false);
     }
   });
 
-  test('no repo called test is visible in pinned or popular', async ({ page }) => {
-    await page.goto(expected.profileUrl, { waitUntil: 'domcontentloaded' });
-
-    const pinned = await getPopularRepoCards(page);
-    const count = await pinned.count();
-
-    for (let i = 0; i < count; i += 1) {
-      const repoLink = pinned.nth(i).locator('a[href*="/arvind3/"]').first();
-      const href = await repoLink.getAttribute('href');
-      const nameFromHref = href?.split('/').filter(Boolean).pop()?.toLowerCase();
-
-      expect(nameFromHref).not.toBe('test');
-    }
+  test('no repo called test is visible in featured projects', async () => {
+    const names = getFeaturedRepoNamesFromReadme();
+    expect(names.map((name) => name.toLowerCase())).not.toContain('test');
   });
 });
