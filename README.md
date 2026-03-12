@@ -2,13 +2,13 @@
 
 # Arvind Bhardwaj
 
-**AI + QA + Analytics Engineering**
+**Software Engineering Manager**
 
 I build measurable engineering systems that combine LLM-driven quality automation, testing intelligence, and product analytics.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Arvind%20Bhardwaj-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arvindkumarbhardwaj/)
 [![X](https://img.shields.io/badge/X-@arvindkbhardwaj-111111?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/arvindkbhardwaj)
-[![Brand Dashboard](https://img.shields.io/badge/Brand%20Analytics-Live%20Dashboard-2563EB?style=for-the-badge&logo=googleanalytics&logoColor=white)](https://arvind3.github.io/brand-analytics-dashboard/)
+[![Github Usage Dashboard](https://img.shields.io/badge/Brand%20Analytics-Live%20Dashboard-2563EB?style=for-the-badge&logo=googleanalytics&logoColor=white)](https://arvind3.github.io/brand-analytics-dashboard/)
 
 </div>
 
