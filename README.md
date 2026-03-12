@@ -22,22 +22,6 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 [![Dashboard Source](https://img.shields.io/badge/Source-brand--analytics--automation-1F2937?style=flat-square&logo=github)](https://github.com/arvind3/brand-analytics-automation)
 
 
----
-
-## Dynamic Key Metrics
-
-<!-- DYNAMIC:METRICS:START -->
-- Visitors (users): **141**
-- Pageviews: **328**
-- Sessions: **155**
-- Engagement rate: **16.7%**
-- Active projects count: **28**
-- Top repos by traffic: Unknown (328 views)
-- Metric window: `30days`
-<!-- DYNAMIC:METRICS:END -->
-
----
-
 ## Featured Projects (Auto-ranked)
 
 <!-- DYNAMIC:REPOS:START -->
