@@ -4,7 +4,7 @@
 
 **Software Engineering Manager**
 
-I build measurable engineering systems that combine LLM-driven quality automation, testing intelligence, and product analytics.
+Building larger scale AI systems
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Arvind%20Bhardwaj-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arvindkumarbhardwaj/)
 [![X](https://img.shields.io/badge/X-@arvindkbhardwaj-111111?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/arvindkbhardwaj)
@@ -91,19 +91,6 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 ### Developer Productivity + Validation Pipelines
 - [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation) - Automated collection, analysis, and publishing of engineering-brand metrics.
 
----
-
-## Recent Activity (Auto-updated)
-
-<!-- DYNAMIC:ACTIVITY:START -->
-- 2026-03-08 - [merged PR: arvind3/arvind3](https://github.com/arvind3/arvind3/pulls)
-- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
-- 2026-03-08 - [opened PR: arvind3/arvind3](https://github.com/arvind3/arvind3/pulls)
-- 2026-03-08 - [Created branch in arvind3/arvind3](https://github.com/arvind3/arvind3)
-- 2026-03-08 - [Pushed commits (arvind3/arvind3)](https://github.com/arvind3/arvind3)
-<!-- DYNAMIC:ACTIVITY:END -->
-
----
 
 ## GitHub Stats
 
@@ -131,13 +118,6 @@ High-signal view of contribution volume, language mix, recent activity, and cale
 [![Analytics](https://img.shields.io/badge/Analytics-Measurable%20Engineering-16A34A?style=for-the-badge&logo=googleanalytics&logoColor=white)](https://github.com/arvind3/brand-analytics-dashboard)
 
 </div>
-
-Three themes define the work shown across this profile:
-
-- AI engineering: agentic workflows, evaluation loops, and LLM-backed product development.
-- QA intelligence: automation systems that turn test execution into actionable engineering insight.
-- Analytics: dashboards and measurement loops that make developer-brand and product signals visible.
-
 ---
 
 ## Contribution Snake
@@ -148,14 +128,3 @@ Three themes define the work shown across this profile:
 
 </div>
 
----
-
-<div align="center">
-
-Dashboard auto-updated via GitHub Actions.
-
-<!-- DYNAMIC:LAST_UPDATED:START -->
-Last refreshed: 2026-03-08
-<!-- DYNAMIC:LAST_UPDATED:END -->
-
-</div>
