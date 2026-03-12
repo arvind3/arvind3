@@ -21,9 +21,6 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 [![Dashboard Status](https://img.shields.io/badge/Dashboard-Live-16A34A?style=flat-square)](https://arvind3.github.io/brand-analytics-dashboard/)
 [![Dashboard Source](https://img.shields.io/badge/Source-brand--analytics--automation-1F2937?style=flat-square&logo=github)](https://github.com/arvind3/brand-analytics-automation)
 
-- Live dashboard: https://arvind3.github.io/brand-analytics-dashboard/
-- Source repository: https://github.com/arvind3/brand-analytics-automation
-- Update cadence: every 5 minutes (dashboard), daily profile refresh
 
 ---
 
@@ -76,21 +73,6 @@ I measure developer-brand impact with data, not assumptions. The dashboard track
 <!-- DYNAMIC:REPOS:END -->
 
 ---
-
-## Focus Areas
-
-### AI Engineering + Agentic Systems
-- [qa-intelligence-platform](https://github.com/arvind3/qa-intelligence-platform) - LLM-oriented QA orchestration and intelligent testing workflows.
-
-### Quality Engineering + Automation Intelligence
-- [robot-finetune-model](https://github.com/arvind3/robot-finetune-model) - Fine-tuned model for Robot Framework test generation.
-
-### Analytics for Retail + Supply Chain
-- [retail_analytics](https://github.com/arvind3/retail_analytics) - Retail analytics patterns for merchandising and operations.
-
-### Developer Productivity + Validation Pipelines
-- [brand-analytics-automation](https://github.com/arvind3/brand-analytics-automation) - Automated collection, analysis, and publishing of engineering-brand metrics.
-
 
 ## GitHub Stats
 
